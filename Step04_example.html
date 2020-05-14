@@ -13,7 +13,7 @@
     <p id="console"></p>
     <script>
         //페이지가 로딩되는 시점에 할일(문자열) 을 저장할 배열 만들기
-        var msgs=[];
+        var msgs=[]  ;
         //저장 버튼을 누르면 호출되는 함수 
         function save(){
             //1. 입력한 문자열을 읽어온다.
@@ -35,10 +35,10 @@
                 //테스트로 콘솔창에 출력해 보기 
                 console.log(line);
                 //todo 에 저장된 문자열에 현재 읽어온 할일을 이어 붙이기 
-                todo = todo+line;
+                todo = todo+line + "<br/>";
             }
             // p 요소에 출력하기
-            document.querySelector("#console").innerText=todo;
+             document.querySelector("#console").innerHTML=todo;
         }
     </script>
 </body>
