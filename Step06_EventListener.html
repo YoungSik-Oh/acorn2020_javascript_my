@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_EventListener.html</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color: yellow;
+            border: 1px solid red;
+        }   
+    </style>
+</head>
+<body>
+    <h1>EventListener Function test...</h1>
+    <div class="box" onclick="clicked()" onmouseover="Mouseoverd()">div1</div>
+    <div class="box" id="one">div2</div>
+    <script>
+        function clicked(){
+            console.log("clicked!");
+            
+        }
+        function Mouseoverd(){
+            console.log("mouseoverd!");
+            
+        }
+
+        document.querySelector("#one")
+        .addEventListener("click",function(){
+            console.log("add");
+        });
+        
+        document.querySelector("#one")
+        .addEventListener("mouseover",function(){
+            console.log(12345);
+        });
+    </script>
+    
+</body>
+</html>
