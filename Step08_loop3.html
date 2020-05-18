@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_loop3.html</title>
+</head>
+<body>
+    <h1>반복문 while 테스트 중...</h1>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <button id="print">출력</button>
+    <script>
+        var names=["김구라","해골","원숭이","주뎅이","덩어리"];
+        document.querySelector("#print").addEventListener("click",function(){
+            var count=0;
+            while (count < names.length){
+                document.querySelectorAll("p")[count].innerText=names[count];
+                console.log(names[count]);
+                count++;            
+            }
+        });
+        while(true){
+            var count=0;
+            console.log(names[count]);
+            count++ // count 1 증가 시키고
+            // 만일 count 가 존재 하지 않는 인덱스라면            
+        if(count == names.length){
+            break; // 반복문 탈출
+            }
+        }   
+        
+
+        // for(var i=0; i<names.length; i++){
+        //     console.log(names[i]);
+            
+        // }
+    </script>
+</body>
+</html>
