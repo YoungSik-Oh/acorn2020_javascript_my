@@ -20,6 +20,9 @@
             document.querySelector("#console").innerText=msg;           
             // 3. 입력창 초기화
             document.querySelector("#inputMsg").value="";
+            document.querySelector("#reset").addEventListener("click",function(){
+                document.querySelector("#console").innerText="";
+            })
         });        
         // document.querySelector("#inputMsg").addEventListener("keydown",function(){
         //     console.log("입력쓰");
