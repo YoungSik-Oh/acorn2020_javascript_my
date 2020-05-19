@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_if.html</title>
+</head>
+<body>
+    <h1>if 문 test...</h1>
+    <p id="console"></p>
+    <script>
+        var isHungry=confirm("배고파요?"); // true / false (alert와 비슷)
+        if(isHungry){
+            document.querySelector("#console").innerText="돼지네~";
+            console.log(isHungry);
+        }else{
+            document.querySelector("#console").innerText="간식 드세요.";
+            console.log(isHungry);
+        };
+    </script>
+</body>
+</html>
