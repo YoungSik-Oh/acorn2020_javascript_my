@@ -31,7 +31,7 @@
         //         }
         //     }
         // })
-
+        var isExist=false; // 함수가 실행 되었는지 확인하기 위한 초기값
         
         document.querySelector("#findBtn").addEventListener("click",function(){
             var n = document.querySelector("#inputName").value;
@@ -39,10 +39,15 @@
                 var b = friends[i];
                 if(n == b.name){
                     document.querySelector("#console").innerText=b.name + " " + b.phone + " " + b.email;
-                    break; 
-                }else{
-                    document.querySelector("#console").innerText= n + "의 정보는 없습니다.";
+                    // 검색 된 이름이 존재한다고 표시 한다.
+                    isExist=true;
                 }
+            }
+            // for 문 종료 후에 if 문 블럭에 실행 순서가 갔었는지 여부 확인
+            if(isExist == false){
+                document.querySelector("#console").innerText=n +"으로 검색 된 정보는 없습니다."
+                console.log(isExist);
+                
             }
         })
 
