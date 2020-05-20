@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step09_example2.html</title>
     <style>
-        
+        .container{
+            text-align: center;
+        }
         #myCanvas{
-            
             border: 2px solid black;
         }
     </style>
 </head>
 <body>
-    <h1>그림판 만들기</h1>
-    <canvas id="myCanvas" width="500" height="500"></canvas>
-    <div>
-        색상<input type="color" id="selectedColor"/>
-        굵기<input type="range" id="selectedWidth" min="1" max="50" step="1" value="1";/>
-        <strong id="displayWidth">1</strong>
-        <button id="clearBtn">Clear</button>
+    <div class="container">
+        <h1>그림판 만들기</h1>
+            <canvas id="myCanvas" width="500" height="500"></canvas>
+            <div>
+                색상<input type="color" id="selectedColor"/>
+                굵기<input type="range" id="selectedWidth" min="1" max="50" step="1" value="1";/>
+                <strong id="displayWidth">1</strong>
+                <button id="clearBtn">Clear</button>
+            </div>
     </div>
     <script>
         var canvas = document.querySelector("#myCanvas"); //canvas 의 참조값 얻어오기

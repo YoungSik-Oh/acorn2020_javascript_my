@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_if3.html</title>
+</head>
+<body>
+    <h1>다중 if test...</h1>
+    <button id="inputBtn">점수 입력</button>
+    <p id="console"></p>
+    <script>
+        document.querySelector("#inputBtn").addEventListener("click",function(){
+            var jumsu = parseFloat(prompt("점수를 입력하세요"));
+            // document.querySelector("#console").innerText=jumsu;
+            console.log(typeof(jumsu));
+            /*
+                점수가 
+                90이상이면 "A"
+                80이상이면 "B"
+                70이상이면 "C"
+                60미만이면 "D"
+                p에 출력
+            */
+            var prt;
+            if(jumsu >= 90){
+                prt="님 학점 " + "A";
+            }else if(jumsu >= 80) {
+                prt="님 학점 " + "B";
+            }else if(jumsu >=70){
+                prt="님 학점 " + "C";
+            }else if(jumsu >= 60){
+                prt="님 학점 " + "D...;;;";
+            }else{
+                prt="님 학점 " + "F ..재수강 각";
+            }
+            document.querySelector("#console").innerText=prt;
+        });
+    </script>
+</body>
+</html>
