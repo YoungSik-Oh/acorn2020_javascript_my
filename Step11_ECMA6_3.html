@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step11_ECMA6_3.html</title>
+</head>
+<body>
+    <h1>ECMASscript6 test...</h1>
+    <button id="testB">test</button>
+    <script>
+        // 인자로 전달되는 숫자의 제곱값을 리턴해주는 익명함수1
+        let a=function(num1){
+            return num1*num1;
+        };
+        // 인자로 전달되는 숫자의 제곱값을 리턴해주는 익명함수2
+        let b=(num1) => {
+            return num1*num1;
+        }
+        // 인자로 전달되는 숫자의 제곱값을 리턴해주는 익명함수3
+        let c=num1=>num1*num1;
+
+        //버튼을 눌렀을때 호출되는 arrow 함수 등록
+        document.querySelector("#testB").addEventListener("click",()=>{
+            console.log("버튼을 눌렀");
+        });
+
+        const num1=[1,2,3,4,5,6,7,8,9,10];
+
+        // let result=nums.fliter(function(item){
+
+        // });
+        let result=num1.filter((item)=>{
+            return item%2==0;
+        });
+        let result2=num1.filter(item=>item%3==0);
+
+        num1.forEach((item, index)=>{
+            console.log(item + " | " + index);
+            
+        })
+
+    </script>
+</body>
+</html>
