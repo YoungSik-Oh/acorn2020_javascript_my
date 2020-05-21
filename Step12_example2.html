@@ -19,19 +19,33 @@
 
     </ul>
     <script>
-        document.querySelector("#addBtn").addEventListener("click",()=>{
-            let list = document.querySelector("#inputMsg").value;
-            let a = document.createElement("li"); 
-                a.innerText=list;
-                    document.querySelector("#toDoList").append(a);
-                        a.addEventListener("click",function(){
-                        //console.log("li 출력");
-                        let del=confirm("삭제할?거 ?"); 
-                        if(del){
-                            this.remove();
-                        };
-                });
+        document.querySelector("#addBtn").addEventListener("click",function(){ 
+            let msg=document.querySelector("#inputMsg").value;
+            let too=document.createElement("li");
+            too.innerText=msg;
+            document.querySelector("#toDoList").append(too);
+            mgs.addEventListener("click",function(){
+                if(confrim("삭제할끼가")){
+                    this.remove();
+                }
+            })
+            
         });
+
+
+        // document.querySelector("#addBtn").addEventListener("click",()=>{
+        //     let list = document.querySelector("#inputMsg").value;
+        //     let a = document.createElement("li"); 
+        //     a.innerText=list;
+        //     document.querySelector("#toDoList").append(a);
+        //     a.addEventListener("click",function(){
+        //     //console.log("li 출력");
+        //     let del=confirm("삭제할?거 ?"); 
+        //     if(del){
+        //     this.remove();
+        //     };
+        //     });
+        // });
     </script>
 </body>
 </html>
