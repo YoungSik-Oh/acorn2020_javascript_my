@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step12_example2.html</title>
+    <style>
+        ul li:hover{
+            background-color: yellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>createElement test...</h1>
+    <input type="text" id="inputMsg" placeholder="할일 입력...">
+    <button id="addBtn">추가</button>
+    <ul id="toDoList">
+
+    </ul>
+    <script>
+        document.querySelector("#addBtn").addEventListener("click",()=>{
+            let list = document.querySelector("#inputMsg").value;
+            let a = document.createElement("li"); 
+                a.innerText=list;
+                    document.querySelector("#toDoList").append(a);
+                        a.addEventListener("click",function(){
+                        //console.log("li 출력");
+                        let del=confirm("삭제할?거 ?"); 
+                        if(del){
+                            this.remove();
+                        };
+                });
+        });
+    </script>
+</body>
+</html>
