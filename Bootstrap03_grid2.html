@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap03_grid2.html</title>
+    <style>.row > div {
+        border: 1px dotted black;
+    }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>이미지 출력하기</h1>
+        <div class="row">
+            <div class="col-3"><img class="img-fluid"src="images/image1.png" alt=""></div>
+            <div class="col-3"><img class="img-fluid"src="images/image2.png" alt=""></div>
+            <div class="col-3"><img class="img-fluid"src="images/image3.png" alt=""></div>
+            <div class="col-3"><img class="img-fluid"src="images/image4.png" alt=""></div>
+        </div>
+        <h1>이미지 출력하기2</h1>
+        <div class="row">
+            <div class="col"><img class="img-fluid"src="images/image1.png" alt=""></div>
+            <div class="col"><img class="img-fluid"src="images/image2.png" alt=""></div>
+            <div class="col"><img class="img-fluid"src="images/image3.png" alt=""></div>
+            <div class="col"><img class="img-fluid"src="images/image4.png" alt=""></div>
+        </div>
+        <h1>이미지 출력하기3</h1>
+        <div class="row">
+            <div class="col-sm-2 col-md-3"><img class="img-fluid"src="images/image1.png" alt=""></div> <!-- sm-6 (sm의 크기가 되었을때)은 한 줄에 12칸중 6개 씩 잡으니 2개의 사진이 들어감 md(md의 크기가 되었을때)는 사진이 12칸중 3개씩 잡으니 4개의 사진이 들어감-->
+            <div class="col-sm-2 col-md-3"><img class="img-fluid"src="images/image1.png" alt=""></div>
+            <div class="col-sm-2 col-md-3"><img class="img-fluid"src="images/image1.png" alt=""></div>
+            <div class="col-sm-2 col-md-3"><img class="img-fluid"src="images/image1.png" alt=""></div>
+            <div class="col-sm-2 col-md-3"><img class="img-fluid"src="images/image1.png" alt=""></div>
+            <div class="col-sm-2 col-md-3"><img class="img-fluid"src="images/image1.png" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
